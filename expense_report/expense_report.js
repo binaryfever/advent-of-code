@@ -14,8 +14,10 @@ rl.on('line', function(line){
 rl.on('close', function(){
   for(let i = 0; i <= expenseArray.length; i++){
     for(let j = 1; j <= expenseArray.length; j++){
-      if((parseInt(expenseArray[i]) + parseInt(expenseArray[j])) == 2020){
-        console.log(expenseArray[i] * expenseArray[j]);
+      for(let k = 2; k <= expenseArray.length; k++){
+        if((parseInt(expenseArray[i]) + parseInt(expenseArray[j]) + parseInt(expenseArray[k])) == 2020){
+          console.log(expenseArray[i] * expenseArray[j] * expenseArray[k]);
+        }
       }
     }
   }
